@@ -1,5 +1,8 @@
-import eact from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
-
-let app = ReactDOM.createRoot(document.querySelector(".app"));
-app.render(<Trial />);
+import { Main } from "./components/main";
+let App = () => {
+  return <Main />;
+};
+let root = ReactDOM.createRoot(document.querySelector(".app"));
+root.render(<App />);
