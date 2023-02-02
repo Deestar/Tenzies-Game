@@ -27,10 +27,8 @@ export let Main = () => {
   console.log(AllArrayNo());
   return (
     <div className="main_cont">
-      <div className="btn_cont">
-        {AllArrayNo()}
-        <button>Roll</button>
-      </div>
+      <div className="btn_cont">{AllArrayNo()}</div>
+      <button className="roll">Roll</button>
     </div>
   );
 };
