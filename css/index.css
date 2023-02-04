@@ -22,6 +22,7 @@ body {
   grid-row-gap: 0px;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .btn_cont {
   height: fit-content;
@@ -39,6 +40,7 @@ body {
   border-radius: 6px;
   height: 50px;
   width: 50px;
+  border-radius: 6px;
   display: grid;
   place-content: center;
   font-weight: 600;
@@ -52,7 +54,54 @@ body {
   border: none;
   background-color: rgb(55, 97, 151);
   border-radius: 10px;
-  box-shadow: 0px 2px 1px 0px rgba(20, 21, 24, 0.76);
+
   font-size: 16px;
   color: white;
+}
+.main_cont .btn_cont .held {
+  background-color: rgb(55, 97, 151);
+}
+.win {
+  color: rgba(14, 38, 41, 0.712);
+  width: 80vw;
+  justify-self: center;
+  text-align: center;
+  height: 15vh;
+  display: grid;
+  place-content: center;
+  background-color: rgb(168, 107, 36);
+  box-shadow: 2px 2px 1px 3px rgba(100, 94, 83, 0.76);
+  animation: blinking 2s alternate-reverse ease-in infinite;
+}
+.win_cont {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(44, 104, 122, 0.425);
+  display: grid;
+  place-content: center;
+  row-gap: 10px;
+}
+.win_cont button {
+  width: 50%;
+  justify-self: center;
+  padding: 10px;
+  border: none;
+  background-color: rgb(168, 107, 36);
+  border-radius: 6px;
+  box-shadow: 0px 2px 1px 1px rgba(100, 94, 83, 0.76);
+}
+.main_cont h1 {
+  max-width: 70%;
+}
+.title {
+  color: rgb(55, 97, 151);
+}
+@keyframes blinking {
+  0% {
+    opacity: 1px;
+  }
+  100% {
+    opacity: 0;
+  }
 }
