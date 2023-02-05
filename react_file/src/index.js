@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { useEffect } from "react";
+import { useCallback } from "react";
 import { Main } from "./components/main";
 let App = () => {
   return <Main />;

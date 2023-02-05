@@ -63,15 +63,16 @@ body {
 }
 .win {
   color: rgba(14, 38, 41, 0.712);
-  width: 80vw;
+  width: 87vw;
   justify-self: center;
   text-align: center;
-  height: 15vh;
+  height: 18vh;
   display: grid;
   place-content: center;
+  color: rgb(55, 97, 151);
   background-color: rgb(168, 107, 36);
   box-shadow: 2px 2px 1px 3px rgba(100, 94, 83, 0.76);
-  animation: blinking 2s alternate-reverse ease-in infinite;
+  animation: blinking 2.5s alternate-reverse ease-in infinite;
 }
 .win_cont {
   width: 100%;
