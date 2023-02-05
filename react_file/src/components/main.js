@@ -23,9 +23,13 @@ export let Main = () => {
   const [lose, setLose] = useState(false);
   const [winGame, setWin] = useState(false);
   const [startcount, setStartCount] = useState(false);
-  const intervalid = useRef();
+  const [updatedtime, setUpdatedTime] = useState(false);
+  const getBestTime = useRef();
+  const intervalid = useRef(localStorage.getItem("besttime"));
   //get an existing besttime from local storage if it exists
-  let getBestTime = () => localStorage.getItem("besttime") || 0;
+  useEffect(() => {
+    getBestTime.current = localStorage.getItem("besttime") || 10000;
+  }, [updatedtime]);
   //Set best time using the besttime setter for everysecond
   useEffect(() => {
     intervalid.current = setInterval(() => {
@@ -34,11 +38,12 @@ export let Main = () => {
   }, [startcount]);
   //save besttime to local storage if user wins
   useEffect(() => {
-    if (winGame || lose) {
-      bestTime < parseInt(getBestTime())
+    if (winGame) {
+      bestTime < parseInt(getBestTime.current)
         ? localStorage.setItem("besttime", bestTime)
         : "";
       clearInterval(intervalid.current);
+      setUpdatedTime((prev) => !prev);
     }
   }, [winGame]);
   //lose after 15 trials
@@ -84,6 +89,7 @@ export let Main = () => {
     setCountNo(0);
     setBestTime(0);
     setStartCount((prev) => !prev);
+    setUpdatedTime((prev) => !prev);
   };
   const Dies = () =>
     //rendering the dice component for each element in allArray state
@@ -108,9 +114,9 @@ export let Main = () => {
 
       {
         //prettier-ignore
-        (winGame || lose) &&
+        (updatedtime) &&
         <div className="win_cont">
-        <h1 className="win">{winGame?<p>YAYY!!<br/>YOU WIN <br/>BEST TIME {getBestTime()}</p>:<span style={{color:
+        <h1 className="win">{winGame?<p>YAYY!!<br/>YOU WIN <br/>BEST TIME {localStorage.getItem("besttime")}</p>:<span style={{color:
         'rgba(27, 90, 119, 0.822)'}}>YOU LOSE<br/>BETTER LUCK NEXT TIME</span>}</h1>
         <button onClick={resetGame}>Play Again</button>
       </div>

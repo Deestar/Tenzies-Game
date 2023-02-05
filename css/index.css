@@ -30,6 +30,8 @@ body {
   grid-template-columns: auto auto auto auto auto;
   padding: 0 20px;
   margin: 5vw;
+  background-color: rgba(212, 164, 101, 0.842);
+  padding: 20px;
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 30px;
