@@ -52,6 +52,7 @@ export let Main = () => {
       setAllArray(AllArrayNo());
       setLose(true);
       clearInterval(intervalid.current);
+      setUpdatedTime((prev) => !prev);
     }
   }, [countNo]);
   //This gets a new random element when roll button is clicked but doesnt change any dice who has been held ==> refer to hold dice function
@@ -104,9 +105,14 @@ export let Main = () => {
     ));
   return (
     <div className="main_cont">
-      <h1 className="title">TENZIES GAME</h1>
-      <h1>Match all the numbers by</h1>
-      <h1 style={{ color: "red" }}>{bestTime}</h1>
+      <div className="game_info">
+        <h1 className="title">TENZIES GAME</h1>
+        <h1>Match all the numbers</h1>
+        <h1 style={{ color: "red", border: "var(--border)" }}>
+          Your time:{bestTime}
+        </h1>
+      </div>
+
       <div className="btn_cont">{Dies()}</div>
       <button onClick={handleClick} className="roll">
         Roll
