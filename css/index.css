@@ -57,7 +57,7 @@ body {
   background-color: transparent;
   border-radius: 6px;
   height: 50px;
-  width: 7vw;
+  width: 8vw;
   border-radius: 6px;
   display: grid;
   place-content: center;
@@ -223,7 +223,7 @@ body {
   }
   .main_cont .btn_cont button {
     border: var(--border);
-    width: 11vw;
+    width: 14vw;
   }
   .main_cont .btn_cont button:nth-child(1) {
     border: var(--border2);

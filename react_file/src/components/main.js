@@ -107,8 +107,8 @@ export let Main = () => {
   return (
     <div className="main_cont">
       <div className="game_info">
-        <h1 className="title">TENZIES GAME</h1>
-        <h1>Match all the numbers</h1>
+        <h1 className="title">DEESTAR'S TENZIES GAME</h1>
+        <h1>Match all the Dice</h1>
         <h1 style={{ color: "red", border: "var(--border)" }}>
           Your time:{bestTime}
         </h1>
