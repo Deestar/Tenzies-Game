@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from "react";
 import { Dices } from "./Dice";
 import { useState } from "react";
 import { useRef } from "react";
-import Dice from "react-dice-roll";
+import Confetti from "react-confetti";
 export let Main = () => {
   //sets the default random numbers
   let AllArrayNo = () => {
@@ -122,8 +122,10 @@ export let Main = () => {
       {
         //prettier-ignore
         (updatedtime) &&
+
         <div className="win_cont">
-        <h1 className="win">{winGame?<p>YAYY!!<br/>YOU WIN <br/>BEST TIME {localStorage.getItem("besttime")}</p>:<span style={{color:
+
+        <h1 className="win">{winGame?<p><Confetti height={'500vh'} /> YAYY!!<br/>YOU WIN <br/>BEST TIME {localStorage.getItem("besttime")}</p>:<span style={{color:
         'rgba(27, 90, 119, 0.822)'}}>YOU LOSE<br/>BETTER LUCK NEXT TIME</span>}</h1>
         <button onClick={resetGame}>Play Again</button>
       </div>
