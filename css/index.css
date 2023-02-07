@@ -79,48 +79,6 @@ body {
   font-weight: 600;
   color: white;
 }
-.main_cont .btn_cont .held_1 {
-  background-image: url(./img/img_1.png);
-  filter: invert(0.4);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.main_cont .btn_cont .held_2 {
-  background-image: url(./img/img_2.png);
-  filter: invert(0.4);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.main_cont .btn_cont .held_3 {
-  background-image: url(./img/img_3.png);
-  filter: invert(0.4);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.main_cont .btn_cont .held_4 {
-  background-image: url(./img/img_4.png);
-  filter: invert(0.4);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.main_cont .btn_cont .held_5 {
-  background-image: url(./img/img_5.png);
-  filter: invert(0.4);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.main_cont .btn_cont .held_6 {
-  background-image: url(./img/img_6.png);
-  filter: invert(0.4);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
 .win {
   color: rgba(14, 38, 41, 0.712);
   width: 87vw;
@@ -158,42 +116,6 @@ body {
 
 .title {
   color: rgb(55, 97, 151);
-}
-.img_1 {
-  background-image: url(./img/img_1.png);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.img_2 {
-  background-image: url(./img/img_2.png);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.img_3 {
-  background-image: url(./img/img_3.png);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.img_4 {
-  background-image: url(./img/img_4.png);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.img_5 {
-  background-image: url(./img/img_5.png);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-.img_6 {
-  background-image: url(./img/img_6.png);
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
 }
 @media (max-width: 500px) {
   .main_cont .roll {
@@ -268,11 +190,11 @@ body {
     justify-self: center;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .main_cont {
-    height: 100vh;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    height: 90vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
   .btn_cont {
     padding-top: 5vw;
