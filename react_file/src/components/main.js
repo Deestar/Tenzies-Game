@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect } from "react";
-import { Dice } from "./Dice";
+import { Dices } from "./Dice";
 import { useState } from "react";
 import { useRef } from "react";
+import Dice from "react-dice-roll";
 export let Main = () => {
   //sets the default random numbers
   let AllArrayNo = () => {
@@ -95,7 +96,7 @@ export let Main = () => {
   const Dies = () =>
     //rendering the dice component for each element in allArray state
     allArray.map((ele, ind) => (
-      <Dice
+      <Dices
         key={ind + 1}
         id={ind}
         held={ele.isheld}

@@ -1,5 +1,5 @@
 import React from "react";
-export let Dice = (prop) => {
+export let Dices = (prop) => {
   return (
     <button
       className={prop.held ? "held" : ""}
