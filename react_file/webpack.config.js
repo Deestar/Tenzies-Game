@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/index.js",
@@ -7,6 +8,8 @@ module.exports = {
     path: path.join(__dirname, "/babeljs"),
     filename: `[name].js`,
     //saves the name of the js file with the entry name above
+    //THIS DESCRIBE THE PATH YOU WANT YOU IMAGES TO GO TO
+    assetModuleFilename: "img/[name][ext]",
   },
 
   // stats: {
@@ -30,17 +33,22 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|jpeg)$/, //This is to search for an image with ext or .....
-        use: [
-          {
-            loader: "file-loader", //This is a loader for images,installed in dev-dependency,in pakage.json
-            options: {
-              name: "[name].[ext]", //Uses the name of the image and its extention
-              // ouputPath: "images/",
-            },
-          },
-        ],
+        type: "asset/resource",
+      },
+      //This is to handle css
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
-  // plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./src/index.html",
+      inject: false,
+      scriptLoading: "blocking",
+      chunks: ["index"],
+    }),
+  ],
 };
