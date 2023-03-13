@@ -1,5 +1,5 @@
-./react_file/node_modules
-/react_file/node_modules
+./node_modules
+/node_modules
 /.pnp
 .pnp.js
 

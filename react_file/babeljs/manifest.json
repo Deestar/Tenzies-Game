@@ -1,0 +1,25 @@
+{
+  "short_name": "TENZIES",
+  "name": "TENZIES GAME APP",
+  "icons": [
+    {
+      "src": "/img/appicon.png",
+      "type": "image/png",
+      "size": "512x512"
+    },
+    {
+      "src": "/img/appicon.png",
+      "type": "image/png",
+      "size": "192x192"
+    },
+    {
+      "src": "/img/appicon.png",
+      "type": "image/png",
+      "size": "512x512"
+    }
+  ],
+  "id": "tenzies-v1.0",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "rgb(55, 97, 151)"
+}
