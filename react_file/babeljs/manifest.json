@@ -4,8 +4,8 @@
   "description": "Can you match all the dice? Try your luck",
   "icons": [
     {
-      "src": "./img/logo192.png",
-      "sizes": "192x192",
+      "src": "./img/appicon.png",
+      "sizes": "160x160",
       "type": "image/png"
     },
     {
