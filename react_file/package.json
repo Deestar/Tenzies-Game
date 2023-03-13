@@ -1,11 +1,13 @@
 {
-  "homepage": "",
+  "homepage": "http://Deestar.github.io/react_file/babeljs/",
   "name": "react_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d -build",
     "build": "webpack --config webpack.config.js --mode production",
     "watch": "webpack --watch --config webpack.config.js --mode development"
   },
