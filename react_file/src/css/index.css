@@ -10,10 +10,11 @@
 body {
   background-color: #0b2434;
   display: grid;
-  max-height: 100vh;
+  max-height: -webkit-fill-available;
   place-content: center;
   max-width: 100vw;
   overflow-x: hidden;
+  position: relative;
 }
 
 .main_cont {
@@ -28,7 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  row-gap: 1px;
 }
 
 .btn_cont {
@@ -244,10 +245,10 @@ body {
 }
 .install {
   position: absolute;
-  top: 5px;
+  top: 10px;
   border-radius: 10px;
   box-shadow: 2px 2px 0px 1px rgba(70, 67, 67, 0.781);
-  padding: 20px 5px;
+  padding: clamp(5px, 2vh, 15px) 5px;
 
   align-self: center;
   background-color: rgb(55, 97, 151);
