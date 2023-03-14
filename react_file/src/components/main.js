@@ -27,6 +27,36 @@ export let Main = () => {
   const [updatedtime, setUpdatedTime] = useState(false);
   const getBestTime = useRef();
   const intervalid = useRef(localStorage.getItem("besttime"));
+  const [install, setInstall] = useState(null);
+  //SET EVENT IF USER HASNT INSTALLED THE APP
+  //There is no assurance any of these will work because its not displaying on browser
+  useEffect(() => {
+    window.addEventListener("beforeinstallprompt", setInstallApp);
+
+    return () => {
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
+    };
+  }, []);
+  const setInstallApp = (event) => {
+    event.preventDefault();
+    setInstall(event);
+  };
+  const promptInstall = () => {
+    if (install) {
+      install.prompt();
+      install.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === "accepted") {
+          console.log("User accepted the install prompt");
+        } else {
+          console.log("User dismissed the install prompt");
+        }
+        setInstall(null);
+      });
+    }
+  };
   //get an existing besttime from local storage if it exists
   useEffect(() => {
     getBestTime.current = localStorage.getItem("besttime") || 10000;
@@ -106,6 +136,11 @@ export let Main = () => {
     ));
   return (
     <div className="main_cont">
+      {install && (
+        <button onClick={promptInstall} className="install">
+          <h2>INSTALL THIS GAME</h2>
+        </button>
+      )}
       <div className="game_info">
         <h1 className="title">DEESTAR'S TENZIES GAME</h1>
         <h1>Match all the Dice</h1>

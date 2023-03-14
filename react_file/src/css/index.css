@@ -30,6 +30,7 @@ body {
   justify-content: center;
   position: relative;
 }
+
 .btn_cont {
   height: fit-content;
   display: grid;
@@ -240,4 +241,19 @@ body {
   100% {
     opacity: 0;
   }
+}
+.install {
+  position: absolute;
+  top: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px 1px rgba(70, 67, 67, 0.781);
+  padding: 20px 5px;
+
+  align-self: center;
+  background-color: rgb(55, 97, 151);
+}
+.install h2 {
+  font-family: helvetica;
+  font-size: clamp(18px, 3.2vw, 27px);
+  color: white;
 }
